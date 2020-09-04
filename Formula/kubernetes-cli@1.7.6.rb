@@ -6,7 +6,8 @@ class KubernetesCliAT176 < Formula
       :revision => "4bc5e7f9a6c25dc4c03d4d656f2cefd21540e28c"
   head "https://github.com/kubernetes/kubernetes.git"
 
-  depends_on "go" => :build
+  # kubernetes-cli will not support go1.10 until version 1.11.x
+  depends_on "go@1.9" => :build
 
   def install
     ENV["GOPATH"] = buildpath
