@@ -1,4 +1,6 @@
-# Rdump Versions
+# homebrew legacy versions
+
+Attempt to rebuild previous versions of clients needed for communication with existing older production infrastructure
 
 ## How do I install these formulae?
 `brew install rdump/versions/<formula>`
