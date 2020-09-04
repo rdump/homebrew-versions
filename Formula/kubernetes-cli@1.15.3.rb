@@ -6,7 +6,7 @@ class KubernetesCliAT1153 < Formula
       :revision => "2d3c76f9091b6bec110a5e63777c332469e0cba2"
   head "https://github.com/kubernetes/kubernetes.git"
 
-  depends_on "go" => :build
+  depends_on "go@1.12" => :build
 
   def install
     ENV["GOPATH"] = buildpath
