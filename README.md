@@ -7,6 +7,8 @@ Attempt to rebuild previous versions of clients needed for communication with ex
 
 Or `brew tap rdump/versions` and then `brew install <formula>`.
 
+Example: `brew install rdump/versions/kubernetes-cli@1.18.8`
+
 ## Documentation
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
 
