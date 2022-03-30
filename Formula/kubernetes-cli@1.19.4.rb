@@ -1,4 +1,4 @@
-class KubernetesCli < Formula
+class KubernetesCliAT1194 < Formula
   desc "Kubernetes command-line interface"
   homepage "https://kubernetes.io/"
   url "https://github.com/kubernetes/kubernetes.git",
@@ -10,13 +10,6 @@ class KubernetesCli < Formula
   livecheck do
     url :head
     regex(/^v([\d.]+)$/i)
-  end
-
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "f741a91d9fbcea6a40fbedbf0a63cdc8e9be3b39d13405d1d8507cc1b0f41e2f" => :catalina
-    sha256 "0eea0ea0d9aaa807972692c47efd8525e22f9977dfba4b333e95fc10c41ce872" => :mojave
-    sha256 "92567b1807bd2d656a2e63b53784a93170a058b5c4e5c308863bb49ab919c85a" => :high_sierra
   end
 
   depends_on "go" => :build
