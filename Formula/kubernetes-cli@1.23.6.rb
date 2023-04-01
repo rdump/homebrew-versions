@@ -9,7 +9,7 @@ class KubernetesCliAT1236 < Formula
 
   livecheck do
     url :stable
-    regex(/^v?(1\.22(?:\.\d+)+)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on "bash" => :build
