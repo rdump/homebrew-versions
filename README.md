@@ -9,17 +9,17 @@ Switch between Homebrew-installed versions with:
 
 Homebrew may have previously included a working version that can still be extracted directly into [your own tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap). You can typically use this version as-is.
 
-`brew extract <FORMULA> --version=<VERSION> <YOUR_GITHUB_USER>/<YOUR_TAP_REPOSITORY_NAME>`
+`brew extract --version=<VERSION> <FORMULA> <YOUR_GITHUB_USER>/<YOUR_TAP_REPOSITORY_NAME>`
 
 Example:
 ```
-brew extract kubernetes-cli --version=1.24 <YOUR_GITHUB_USER>/<YOUR_TAP_REPOSITORY_NAME>
+brew extract --version=1.26 kubernetes-cli <YOUR_GITHUB_USER>/<YOUR_TAP_REPOSITORY_NAME>
 >>> ==> Searching repository history
->>> ==> Writing formula for kubernetes-cli from revision 0efe8d6 to:
->>> /opt/homebrew/Library/Taps/<YOUR_GITHUB_USER>/<YOUR_TAP_REPOSITORY_NAME>/Formula/kubernetes-cli@1.24.rb
+>>> ==> Writing formula for kubernetes-cli from revision NNNNNNN to:
+>>> /opt/homebrew/Library/Taps/<YOUR_GITHUB_USER>/<YOUR_TAP_REPOSITORY_NAME>/Formula/kubernetes-cli@1.26.rb
 ```
 Then
-`brew install kubernetes-cli@1.24`
+`brew install kubernetes-cli@1.26`
 
 For more, see: [Homebrew versions documentation](https://docs.brew.sh/Versions)
 
@@ -31,16 +31,16 @@ If it is not possible to extract a working version, see below for using, and for
 
 You can also use [MacPorts](https://www.macports.org/) instead of brew for this, if you're running on macOS and MacPorts has the software you need.
 
-Example: `sudo port install kubectl-1.24`
+Example: `sudo port install kubectl-1.27`
 
 When [MacPorts](https://www.macports.org/) has multiple versions and the maintainer has set up a selector, switch between them with `port select …`.
 
 Example:
 ```
 port select --summary | grep kubectl
->>> kubectl     kubectl1.23    kubectl1.21 kubectl1.22 kubectl1.23 kubectl1.24 none
-sudo port select kubcctl kubectl1.24
->>> Selecting 'kubectl1.24' for 'kubectl' succeeded. 'kubectl1.24' is now active.
+>>> kubectl     kubectl1.26    kubectl1.23 kubectl1.24 kubectl1.25 kubectl1.26 kubectl1.27 none
+sudo port select kubcctl kubectl1.27
+>>> Selecting 'kubectl1.27' for 'kubectl' succeeded. 'kubectl1.27' is now active.
 ```
 
 ## How do I install these Homebrew formulae?
